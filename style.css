@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', arial, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.500);
+    padding: 50px 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.colors {
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="color"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 30%;
+    height: 2rem;
+    margin: 15px 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.buttons button {
+    background-color: transparent;
+    border: .5px solid rgba(0, 0, 0, 0.466);
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.219);
+}
+
+.buttons button:active {
+    border: none;
+    color: white;
+    background-color: #4a6ee0;
+}
+
+button i {
+    height: 1rem;
+}
+
+.rotate-icon i {
+    rotate: 45deg;
+}
+
+#submit {
+    display: block;
+    font-weight: bold;
+    color: white;
+    background-color: #4a6ee0;
+    padding: 10px 70px;
+    border-radius: 20px;
+    margin: 10px auto 30px auto;
+}
+
+#submit:hover {
+    background-color: #6587f7;
+}
+
+#submit:active {
+    background-color: #fff;
+    color: #6587f7;
+}
+
+.output {
+    position: relative;
+}
+
+#code {
+    background-color: #f0f2fc;
+    overflow: hidden;
+    resize: none;
+    color: #30304a;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#copy {
+    background-color: transparent;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-top: 15px;
+    position: absolute;
+    left: 88%;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+#copy:active {
+    color: #4a6ee0;
+}
