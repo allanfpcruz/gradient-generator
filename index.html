@@ -13,33 +13,44 @@
 <body>
     <div class="container">
         <h1>Gradient Generator</h1>
-        <div class="colors">
-            <input type="color" id="color-a" value="#7986cb">
-            <input type="color" id="color-b" value="#1a237e">
+        <div class="input-area">
+            <div class="input-container">
+                <input type="color" id="color-a" value="#7986cb">
+                <input type="range" id="range-a">
+            </div>
+            <div class="input-container">
+                <input type="color" id="color-b" value="#1a237e">
+                <input type="range" id="range-b">
+            </div>
+        </div>
+        <div class="add">
+            <button id="add-color">
+                <i class="fa-solid fa-circle-plus"></i>
+            </button>
         </div>
         <div class="buttons">
-            <button>
+            <button value="to top">
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
-            <button>
+            <button class="active" value="to bottom">
                 <i class="fa-solid fa-arrow-down"></i>
             </button>
-            <button>
+            <button value="to right">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
-            <button>
+            <button value="to left">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="rotate-icon">
+            <button class="rotate-icon" value="to top right">
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
-            <button class="rotate-icon">
+            <button class="rotate-icon" value="to bottom left">
                 <i class="fa-solid fa-arrow-down"></i>
             </button>
-            <button class="rotate-icon">
+            <button class="rotate-icon" value="to bottom right">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
-            <button class="rotate-icon">
+            <button class="rotate-icon" value="to top left">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
         </div>

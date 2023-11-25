@@ -9,6 +9,7 @@
 }
 
 body {
+    background-image: linear-gradient(to bottom, #7986cb, #1a237e);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -16,6 +17,7 @@ body {
 }
 
 .container {
+    width: 350px;
     background-color: #fff;
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.500);
     padding: 50px 30px;
@@ -23,13 +25,20 @@ body {
 }
 
 h1 {
+    text-align: center;
     font-size: 1.75rem;
     font-weight: bold;
 }
 
-.colors {
+.input-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.input-container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 input[type="color"] {
@@ -37,7 +46,7 @@ input[type="color"] {
     -webkit-appearance: none;
     background-color: transparent;
     cursor: pointer;
-    width: 30%;
+    width: 60%;
     height: 2rem;
     margin: 15px 0;
 }
@@ -45,6 +54,22 @@ input[type="color"] {
 input[type="color"]::-webkit-color-swatch {
     border: none;
     border-radius: 20px;
+}
+
+input[type="range"] {
+    width: 80%;
+}
+
+.add {
+    margin: 15px;
+    display: block;
+}
+
+#add-color {
+    cursor: pointer;
+    background-color: transparent;
+    display: block;
+    margin: auto;
 }
 
 .buttons {
@@ -67,7 +92,7 @@ input[type="color"]::-webkit-color-swatch {
     background-color: rgba(0, 0, 0, 0.219);
 }
 
-.buttons button:active {
+.buttons button.active {
     border: none;
     color: white;
     background-color: #4a6ee0;
@@ -89,6 +114,7 @@ button i {
     padding: 10px 70px;
     border-radius: 20px;
     margin: 10px auto 30px auto;
+    cursor: pointer;
 }
 
 #submit:hover {
@@ -110,8 +136,10 @@ button i {
     resize: none;
     color: #30304a;
     padding: 10px;
+    height: 4rem;
     width: 100%;
     font-family: 'Roboto Mono', monospace;
+    font-size: 0.75rem;
 }
 
 #copy {
