@@ -15,18 +15,25 @@
         <h1>Gradient Generator</h1>
         <div class="input-area">
             <div class="input-container">
-                <input type="color" id="color-a" value="#7986cb">
-                <input type="range" id="range-a">
+                <input type="color" class="input-color" id="color-a" value="#7986cb">
+                <input type="range" class="input-range" id="range-a" value="0">
             </div>
             <div class="input-container">
-                <input type="color" id="color-b" value="#1a237e">
-                <input type="range" id="range-b">
+                <input type="color" class="input-color" id="color-b" value="#1a237e">
+                <input type="range" class="input-range" id="range-b" value="100">
             </div>
         </div>
-        <div class="add">
-            <button id="add-color">
-                <i class="fa-solid fa-circle-plus"></i>
-            </button>
+        <div class="add-minus-container">
+            <div class="add">
+                <button id="add-color">
+                    <i class="fa-solid fa-circle-plus"></i>
+                </button>
+            </div>
+            <div class="remove">
+                <button id="remove-color" class="none">
+                    <i class="fa-solid fa-circle-minus"></i>
+                </button>
+            </div>
         </div>
         <div class="buttons">
             <button value="to top">

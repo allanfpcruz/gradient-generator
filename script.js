@@ -3,6 +3,7 @@ const colorB = document.querySelector('#color-b')
 const rangeA = document.querySelector('#range-a')
 const rangeB = document.querySelector('#range-b')
 const addButton = document.querySelector('#add-color')
+const removeButton =document.querySelector('#remove-color')
 const inputArea = document.querySelector('.input-area')
 const buttons = document.querySelectorAll('.buttons button')
 const submit = document.querySelector('#submit')
@@ -85,11 +86,19 @@ function addColor() {
     inputContainer.setAttribute('class', 'input-container')
     const color = document.createElement('input')
     color.setAttribute('type', 'color')
+    color.classList.add('input-color')
     const range = document.createElement('input')
     range.setAttribute('type', 'range')
+    range.classList.add('input-range')
     inputArea.appendChild(inputContainer)
     inputContainer.appendChild(color)
     inputContainer.appendChild(range)
+    removeButton.classList.remove('none')
+}
+
+function removeColor() {
+    const inputContaineres = document.querySelectorAll('.input-container')
+    inputContaineres[inputContaineres.length-1].parentNode.removeChild(inputContaineres[inputContaineres.length-1])
 }
 
 //copia o código
@@ -112,6 +121,10 @@ buttons.forEach(button => {
 
 addButton.addEventListener('click', (e) => {
     addColor()
+})
+
+removeButton.addEventListener('click', (e) => {
+    removeColor()
 })
 
 copy.addEventListener('click', (e) => {

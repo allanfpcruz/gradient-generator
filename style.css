@@ -60,16 +60,24 @@ input[type="range"] {
     width: 80%;
 }
 
-.add {
-    margin: 15px;
+.add-minus-container {
+    display: flex;
+    justify-content: center;
+}
+
+.add, .remove {
+    margin: 10px;
     display: block;
 }
 
-#add-color {
+.none {
+    display: none!important;
+}
+
+#add-color, #remove-color {
     cursor: pointer;
     background-color: transparent;
     display: block;
-    margin: auto;
 }
 
 .buttons {
