@@ -4,6 +4,7 @@ const rangeA = document.querySelector('#range-a')
 const rangeB = document.querySelector('#range-b')
 const addButton = document.querySelector('#add-color')
 const removeButton =document.querySelector('#remove-color')
+const removeContainer = document.querySelector('.remove')
 const inputArea = document.querySelector('.input-area')
 const buttons = document.querySelectorAll('.buttons button')
 const submit = document.querySelector('#submit')
@@ -93,12 +94,17 @@ function addColor() {
     inputArea.appendChild(inputContainer)
     inputContainer.appendChild(color)
     inputContainer.appendChild(range)
-    removeButton.classList.remove('none')
+    removeContainer.classList.remove('none')
 }
 
 function removeColor() {
     const inputContaineres = document.querySelectorAll('.input-container')
-    inputContaineres[inputContaineres.length-1].parentNode.removeChild(inputContaineres[inputContaineres.length-1])
+    if (inputContaineres.length > 3) {
+        inputContaineres[inputContaineres.length-1].parentNode.removeChild(inputContaineres[inputContaineres.length-1])
+    } else if (inputContaineres.length == 3) {
+        inputContaineres[inputContaineres.length-1].parentNode.removeChild(inputContaineres[inputContaineres.length-1])
+        removeContainer.classList.add('none')
+    }
 }
 
 //copia o código
