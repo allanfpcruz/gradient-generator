@@ -99,11 +99,14 @@ function addColor() {
 
 function removeColor() {
     const inputContaineres = document.querySelectorAll('.input-container')
-    if (inputContaineres.length > 3) {
-        inputContaineres[inputContaineres.length-1].parentNode.removeChild(inputContaineres[inputContaineres.length-1])
-    } else if (inputContaineres.length == 3) {
-        inputContaineres[inputContaineres.length-1].parentNode.removeChild(inputContaineres[inputContaineres.length-1])
+    let i = inputContaineres.length
+    if (i > 3) {
+        inputContaineres[i-1].parentNode.removeChild(inputContaineres[i-1])
+        geralData.pop()
+    } else if (i == 3) {
+        inputContaineres[i-1].parentNode.removeChild(inputContaineres[i-1])
         removeContainer.classList.add('none')
+        geralData.pop()
     }
 }
 
